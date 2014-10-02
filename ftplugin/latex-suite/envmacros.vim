@@ -27,6 +27,7 @@ let s:description ="\\begin{description}\<cr>\\item[<+label+>]<++>\<cr>\\end{des
 let s:document =   "\\documentclass[<+options+>]{<+class+>}\<cr>\<cr>\\begin{document}\<cr><++>\<cr>\\end{document}"
 let s:tabular = "\\begin{tabular}[<+hbtp+>]{<+format+>}\<cr><++>\<cr>\\end{tabular}"
 let s:tabular_star = "\\begin{tabular*}[<+hbtp+>]{<+format+>}\<cr><++>\<cr>\\end{tabular*}"
+let s:frame = "\\begin{frame}\<cr>\\frametitle{<++>}\<cr>\<cr>\\end{frame}"
 
 " }}}
 " define environments with special behavior in line wise selection. {{{
