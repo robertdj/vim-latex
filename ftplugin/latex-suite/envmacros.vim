@@ -16,7 +16,7 @@ nmap <silent> <script> <plug> i
 imap <silent> <script> <C-o><plug> <Nop>
 
 " Define environments for IMAP evaluation " {{{
-let s:figure =     "\\begin{figure}[<+htpb+>]\<cr>\\centering\<cr>\\psfig{figure=<+eps file+>}\<cr>\\caption{<+caption text+>}\<cr>\\label{fig:<+label+>}\<cr>\\end{figure}<++>"
+let s:figure =     "\\begin{figure}\<cr>\\centering\<cr>\\psfig{figure=<+eps file+>}\<cr>\\caption{<+caption text+>}\<cr>\\label{fig:<+label+>}\<cr>\\end{figure}<++>"
 let s:figure_graphicx =    "\\begin{figure}[<+htpb+>]\<cr>\\centering\<cr>\\includegraphics{<+file+>}\<cr>\\caption{<+caption text+>}\<cr>\\label{fig:<+label+>}\<cr>\\end{figure}<++>"
 let s:minipage =   "\\begin{minipage}[<+tb+>]{<+width+>}\<cr><++>\<cr>\\end{minipage}<++>"
 let s:picture =    "\\begin{picture}(<+width+>, <+height+>)(<+xoff+>,<+yoff+>)\<cr>\\put(<+xoff+>,<+yoff+>){\\framebox(<++>,<++>){<++>}}\<cr>\\end{picture}<++>"
@@ -27,7 +27,6 @@ let s:description ="\\begin{description}\<cr>\\item[<+label+>]<++>\<cr>\\end{des
 let s:document =   "\\documentclass[<+options+>]{<+class+>}\<cr>\<cr>\\begin{document}\<cr><++>\<cr>\\end{document}"
 let s:tabular = "\\begin{tabular}[<+hbtp+>]{<+format+>}\<cr><++>\<cr>\\end{tabular}"
 let s:tabular_star = "\\begin{tabular*}[<+hbtp+>]{<+format+>}\<cr><++>\<cr>\\end{tabular*}"
-let s:frame = "\\begin{frame}\<cr>\\frametitle{<++>}\<cr>\<cr>\\end{frame}"
 
 " }}}
 " define environments with special behavior in line wise selection. {{{
@@ -1165,3 +1164,11 @@ augroup END
 let s:doneOnce = 1
 
 " vim:fdm=marker:nowrap:noet:ff=unix
+
+
+" ==============================================================================
+" Additions by Robert DJ
+" ==============================================================================
+" For Beamer frame
+
+let g:Tex_Env_frame = "\\begin{frame}\<cr>\\frametitle{<++>}\<cr>\<cr>\\end{frame}<++>"
